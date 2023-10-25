@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DbmsWcfService.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DbmsWcfService.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:63662/DbmsService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DbmsWcfService.Models.Types" />
+  <xs:import schemaLocation="http://localhost:63662/DbmsService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:63662/DbmsService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/DbmsWcfService.Models.Values" />
+  <xs:complexType name="DatabaseInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TableDifferences" nillable="true" type="tns:ArrayOfTableDifferenceInfo" />
+      <xs:element minOccurs="0" name="Tables" nillable="true" type="tns:ArrayOfTableInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatabaseInfo" nillable="true" type="tns:DatabaseInfo" />
+  <xs:complexType name="ArrayOfTableDifferenceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TableDifferenceInfo" nillable="true" type="tns:TableDifferenceInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTableDifferenceInfo" nillable="true" type="tns:ArrayOfTableDifferenceInfo" />
+  <xs:complexType name="TableDifferenceInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TableInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LeftTableInfo" nillable="true" type="tns:TableInfo" />
+          <xs:element minOccurs="0" name="RightTableInfo" nillable="true" type="tns:TableInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TableDifferenceInfo" nillable="true" type="tns:TableDifferenceInfo" />
+  <xs:complexType name="TableInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TableInfo" nillable="true" type="tns:TableInfo" />
+  <xs:complexType name="ArrayOfTableInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TableInfo" nillable="true" type="tns:TableInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTableInfo" nillable="true" type="tns:ArrayOfTableInfo" />
+  <xs:complexType name="ArrayOfColumn">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Column" nillable="true" type="tns:Column" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfColumn" nillable="true" type="tns:ArrayOfColumn" />
+  <xs:complexType name="Column">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DbmsWcfService.Models.Types" minOccurs="0" name="Type" nillable="true" type="q1:Type" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Column" nillable="true" type="tns:Column" />
+  <xs:complexType name="Table">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="columns" nillable="true" type="tns:ArrayOfColumn" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="rows" nillable="true" type="q2:ArrayOfKeyValueOfintRowbogZ6Qvl" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Table" nillable="true" type="tns:Table" />
+  <xs:complexType name="Row">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DbmsWcfService.Models.Values" minOccurs="0" name="Cells" nillable="true" type="q3:ArrayOfValue" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Row" nillable="true" type="tns:Row" />
+  <xs:complexType name="TableDifference">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Table">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TableDifference" nillable="true" type="tns:TableDifference" />
+</xs:schema>

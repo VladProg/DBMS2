@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="0265716d-2eea-4ec7-8fea-a187941b1ade" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:63662/DbmsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DbmsService.wsdl" MetadataType="Wsdl" ID="fec59d59-ddf3-4ae8-bfd1-abf26bb4b380" SourceId="1" SourceUrl="http://localhost:63662/DbmsService.svc?wsdl" />
+    <MetadataFile FileName="DbmsService.disco" MetadataType="Disco" ID="0d39033d-233a-4d7c-9ff2-323ec8ce9fe1" SourceId="1" SourceUrl="http://localhost:63662/DbmsService.svc?disco" />
+    <MetadataFile FileName="DbmsService.xsd" MetadataType="Schema" ID="7422ec29-20d3-4558-824c-8d7b0855d0f2" SourceId="1" SourceUrl="http://localhost:63662/DbmsService.svc?xsd=xsd5" />
+    <MetadataFile FileName="DbmsService1.xsd" MetadataType="Schema" ID="17764db5-e73f-4a22-8261-2566e63b6752" SourceId="1" SourceUrl="http://localhost:63662/DbmsService.svc?xsd=xsd4" />
+    <MetadataFile FileName="DbmsService6.xsd" MetadataType="Schema" ID="0935666b-bfb6-4b34-b8a0-a3c1390d0ac6" SourceId="1" SourceUrl="http://localhost:63662/DbmsService.svc?xsd=xsd6" />
+    <MetadataFile FileName="DbmsService2.xsd" MetadataType="Schema" ID="42c1fa45-f940-41c9-9668-b1b0f4b6ef5a" SourceId="1" SourceUrl="http://localhost:63662/DbmsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DbmsService3.xsd" MetadataType="Schema" ID="48598e18-a5ad-4b11-a317-9e8100776b01" SourceId="1" SourceUrl="http://localhost:63662/DbmsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DbmsService4.xsd" MetadataType="Schema" ID="29956c46-db02-410e-8869-1d557fbbbce4" SourceId="1" SourceUrl="http://localhost:63662/DbmsService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DbmsService5.xsd" MetadataType="Schema" ID="8e2936d1-9dbc-4766-9f7b-06062c79aaad" SourceId="1" SourceUrl="http://localhost:63662/DbmsService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

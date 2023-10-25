@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DbmsWcfService.Models.Types" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DbmsWcfService.Models.Types" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Type">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Type" nillable="true" type="tns:Type" />
+  <xs:complexType name="String">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Type">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="String" nillable="true" type="tns:String" />
+  <xs:complexType name="Real">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Type">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Real" nillable="true" type="tns:Real" />
+  <xs:complexType name="Integer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Type">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Integer" nillable="true" type="tns:Integer" />
+  <xs:complexType name="ColorInvl">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Type">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="B1" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="B2" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="G1" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="G2" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="R1" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="R2" type="xs:unsignedByte" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ColorInvl" nillable="true" type="tns:ColorInvl" />
+  <xs:complexType name="Color">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Type">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Color" nillable="true" type="tns:Color" />
+  <xs:complexType name="Char">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Type">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Char" nillable="true" type="tns:Char" />
+</xs:schema>
